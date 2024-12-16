@@ -1,0 +1,123 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    font-family: 'Times New Roman', serif;
+}
+.container .card {
+    background-color: #D3D3D3;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.navbar {
+    background-color: #3E6E8D;
+    color: #fff;
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+.navbar a:hover {
+    text-decoration: underline;
+}
+    
+.section-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Navbar Superior */
+.bg-primary {
+    background-color: #4B77A7 !important; /* Cor azul semelhante */
+    width: 100%; /* Garante largura total no iframe */
+}
+
+.navbar-brand {
+    font-family: 'Times New Roman', serif;
+}
+
+/* Ícones */
+i.fas {
+    font-size: 1.2rem;
+}
+
+/* Navbar Inferior */
+.bg-light {
+    background-color: #C8DAE3 !important; /* Cor cinza-azulada */
+    border-top: 1px solid #000; /* Borda superior */
+    width: 100%; /* Garante largura total no iframe */
+}
+
+.nav-link {
+    color: #000 !important;
+    font-family: 'Times New Roman', serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.nav-link.shop-active {
+    background-color: #D8E4EA; /* Cor do destaque no botão SHOP */
+    border-radius: 8px;
+    padding: 5px 15px;
+}
+
+.nav-link:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Remove qualquer overflow horizontal */
+.iframe-navbar {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Container dos botões */
+.accessibility-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* Estilo dos botões */
+.access-btn {
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.access-btn:hover {
+    background-color: #ddd;
+}

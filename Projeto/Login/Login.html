@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register and Login Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <!-- Register Section -->
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 register-section">
+                <h3 class="title">Register</h3>
+                <div class="container col-6 col-sm-6 col-md-6 col-lg-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="email" class="form-label">email:</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-email" class="form-label">confirm email:</label>
+                            <input type="email" class="form-control" id="confirm-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="form-label">password:</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password" class="form-label">confirm password:</label>
+                            <input type="password" class="form-control" id="confirm-password">
+                        </div>
+                        <div class="icon-button">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="login icon">
+                            <a class="botao" href="Home.html">Register</a>
+                        </div>
+                        <div class="icon-button fixed-bottom">
+                            <button class="btn btn-danger">
+                                <img src="https://cdn-icons-png.flaticon.com/512/616/616489.png" alt="icon">
+                                <a href="https://forms.gle/Q79giuAqKJjDQcyZ9" style="text-decoration: none; color: black;"><span>Click here and help us by answering this form</span></a>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Login Section -->
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 login-section">
+                <h3 class="title">Login</h3>
+                <div class="container col-6 col-sm-6 col-md-6 col-lg-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="login-email" class="form-label">email:</label>
+                            <input type="email" class="form-control" id="login-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password" class="form-label">password:</label>
+                            <input type="password" class="form-control" id="login-password">
+                        </div>
+                        <div class="icon-button">
+                            <a class="botao" href="../home/Home.html"><img src="https://cdn-icons-png.flaticon.com/512/616/616489.png" alt="register icon"><span>Login</span></a>
+                        </div>
+                    </form> 
+                </div>
+            </div>
+        </div>
+        <div class="accessibility-buttons">
+            <!-- Botão para Aumentar Fonte -->
+            <button id="increase-font-btn" class="access-btn">A</button>
+
+            <!-- Botão para diminuir a Fonte -->
+            <button id="decrease-font-btn" class="access-btn">a</button>
+
+            <!-- Botão para Mudar Background -->
+            <button id="toggle-background-btn" class="access-btn"><img src="../public/imgs/modoEscuro.png" alt=""></button>
+        
+            <!-- Botões que não fazem nada -->
+            <button class="access-btn">👁‍🗨</button>
+            <button class="access-btn">⠿</button>
+        </div>
+    </div>
+    <script>
+        // Botão para aumentar a fonte
+        document.getElementById('increase-font-btn').addEventListener('click', () => {
+            document.querySelectorAll('body, body *').forEach((element) => {
+                // Verificar se o elemento tem font-size e ajustar
+                let currentFontSize = window.getComputedStyle(element).fontSize;
+                let newSize = parseFloat(currentFontSize) * 1.1; // Aumenta 10%
+                element.style.fontSize = newSize + 'px';
+            });
+        });
+
+        // Botão para diminuir a fonte
+        document.getElementById('decrease-font-btn').addEventListener('click', () => {
+            document.querySelectorAll('body, body *').forEach((element) => {
+                let currentFontSize = window.getComputedStyle(element).fontSize;
+                let newSize = parseFloat(currentFontSize) * 0.9; // Diminui 10%
+                element.style.fontSize = newSize + 'px';
+            });
+        });
+
+        // Botão para mudar o background
+        document.getElementById('toggle-background-btn').addEventListener('click', () => {
+            let body = document.body;
+            if (body.style.backgroundColor === 'black') {
+                body.style.backgroundColor = '';
+                body.style.color = '';
+            } else {
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white';
+            }
+        });
+    </script>
+</body>
+</html>

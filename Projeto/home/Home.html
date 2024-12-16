@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Culture</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Home.css">
+
+</head>
+<body>
+    <!-- Navbar Superior -->
+    <div class="bg-primary d-flex justify-content-between align-items-center p-2 px-4 border-bottom iframe-navbar">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+        <div class="navbar-brand text-black fs-4 fw-bold">3D CULTURE</div>
+        <div>
+            <i class="fas fa-shopping-cart text-black me-2"></i>
+            <a href="../Purchases/Purchase.html" style="color: black;"> <span class="text-black  bi bi-cart small">Cart USD(US$) <i class="fas fa-caret-down"></i></span></a>
+        </div>
+    </div>
+
+    <!-- Navbar Inferior -->
+    <nav class="navbar navbar-expand-lg bg-light iframe-navbar">
+        <div class="container-fluid justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link bi bi-house-door text-black fw-bold shop-active" href="../home/Home.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bi bi-shop active text-black fw-bold" href="../Shop/Shop.html">SHOP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bi bi-send text-black fw-bold" href="../order/Order.html">ORDER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bi bi-box-arrow-in-right text-black fw-bold" href="../Login/Login.html">LOGIN</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <!-- Main Content -->
+        <div class="container mt-4">
+            <div class="row">
+                <!-- Nova Coleção -->
+                <div class="col-12 col-md-12">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <img src="../public/imgs/resident.jpg" alt="Nova coleção">
+                            </div>
+                            <div class="col-12 col-md-8 d-flex align-items-center justify-content-center">
+                                <a href="../Products/Product.html" style="color: black;"><h2>Nova coleção</h2></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="container mt-4">
+            <div class="row">
+                <!-- Faça um Pedido -->
+                <div class="col-12 col-md-12">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-12 col-md-8 d-flex align-items-center justify-content-center">
+                                <a href="../order/Order.html" style="color: black;"><h2>Faça um pedido</h2></a>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <img src="../public/imgs/autoral.jpg" alt="Faça um pedido">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    
+        <!-- Main Content -->
+        <div class="container mt-4">
+            <div class="row">
+                <!-- Sobre Nós -->
+                <div class="col-12 col-md-12">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <img src="../public/imgs/maquina.jpg" alt="Sobre Nós">
+                            </div>
+                            <div class="col-12 col-md-8 d-flex align-items-center justify-content-center">
+                                <h2>Sobre Nós</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="accessibility-buttons">
+            <!-- Botão para Aumentar Fonte -->
+            <button id="increase-font-btn" class="access-btn">A</button>
+
+            <!-- Botão para diminuir a Fonte -->
+            <button id="decrease-font-btn" class="access-btn">a</button>
+
+            <!-- Botão para Mudar Background -->
+            <button id="toggle-background-btn" class="access-btn"><img src="../public/imgs/modoEscuro.png" alt=""></button>
+        
+            <!-- Botões que não fazem nada -->
+            <button class="access-btn">👁‍🗨</button>
+            <button class="access-btn">⠿</button>
+        </div>
+
+    </div>
+
+    <script>
+        // Botão para aumentar a fonte
+        document.getElementById('increase-font-btn').addEventListener('click', () => {
+            document.querySelectorAll('body, body *').forEach((element) => {
+                // Verificar se o elemento tem font-size e ajustar
+                let currentFontSize = window.getComputedStyle(element).fontSize;
+                let newSize = parseFloat(currentFontSize) * 1.1; // Aumenta 10%
+                element.style.fontSize = newSize + 'px';
+            });
+        });
+
+        // Botão para diminuir a fonte
+        document.getElementById('decrease-font-btn').addEventListener('click', () => {
+            document.querySelectorAll('body, body *').forEach((element) => {
+                let currentFontSize = window.getComputedStyle(element).fontSize;
+                let newSize = parseFloat(currentFontSize) * 0.9; // Diminui 10%
+                element.style.fontSize = newSize + 'px';
+            });
+        });
+
+        // Botão para mudar o background
+        document.getElementById('toggle-background-btn').addEventListener('click', () => {
+            let body = document.body;
+            if (body.style.backgroundColor === 'black') {
+                body.style.backgroundColor = '';
+                body.style.color = '';
+            } else {
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white';
+            }
+        });
+    </script>
+
+    <!-- Bootstrap JS (opcional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

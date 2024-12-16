@@ -1,0 +1,146 @@
+/* Custom CSS */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Georgia', serif;
+}
+
+/* .navbar {
+    background-color: #5a7ea0;
+    color: white;
+}
+
+.navbar a {
+    color: black;
+    font-family: 'Georgia', serif;
+}
+
+.navbar a.active {
+    font-weight: bold;
+    opacity: 0.6;
+} */
+
+.purchase-box {
+    background-color: #5a7ea0;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.purchase-header {
+    font-size: 2rem;
+    color: white;
+    padding: 15px;
+}
+
+.purchase-content {
+    background-color: #c3d0dc;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+.purchase-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.purchase-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.bullet {
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.total-box {
+    background-color: #5a7ea0;
+    color: white;
+    text-align: right;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+}
+
+/* Navbar Superior */
+.bg-primary {
+    background-color: #4B77A7 !important; /* Cor azul semelhante */
+    width: 100%; /* Garante largura total no iframe */
+}
+
+.navbar-brand {
+    font-family: 'Times New Roman', serif;
+}
+
+/* Ícones */
+i.fas {
+    font-size: 1.2rem;
+}
+
+/* Navbar Inferior */
+.bg-light {
+    background-color: #C8DAE3 !important; /* Cor cinza-azulada */
+    border-top: 1px solid #000; /* Borda superior */
+    width: 100%; /* Garante largura total no iframe */
+}
+
+.nav-link {
+    color: #000 !important;
+    font-family: 'Times New Roman', serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.nav-link.shop-active {
+    background-color: #D8E4EA; /* Cor do destaque no botão SHOP */
+    border-radius: 8px;
+    padding: 5px 15px;
+}
+
+.nav-link:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Container dos botões */
+.accessibility-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* Estilo dos botões */
+.access-btn {
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.access-btn:hover {
+    background-color: #ddd;
+}

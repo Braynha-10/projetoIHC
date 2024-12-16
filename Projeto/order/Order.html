@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Culture</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Order.css">
+</head>
+<body>
+     <!-- Navbar Superior -->
+     <div class="bg-primary d-flex justify-content-between align-items-center p-2 px-4 border-bottom iframe-navbar">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+        <div class="navbar-brand text-black fs-4 fw-bold">3D CULTURE</div>
+        <div>
+            <i class="fas fa-shopping-cart text-black me-2"></i>
+            <a href="../Purchases/Purchase.html" style="color: black;"> <span class="text-black  bi bi-cart small">Cart USD(US$) <i class="fas fa-caret-down"></i></span></a>
+        </div>
+    </div>
+
+    <!-- Navbar Inferior -->
+    <nav class="navbar navbar-expand-lg bg-light iframe-navbar">
+        <div class="container-fluid justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link bi bi-house-door text-black fw-bold" href="../home/Home.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bi bi-shop active text-black fw-bold" href="../Shop/Shop.html">SHOP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bi bi-send text-black fw-bold shop-active" href="../order/Order.html">ORDER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bi bi-box-arrow-in-right text-black fw-bold" href="../Login/Login.html">LOGIN</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Content Section -->
+    <div class="container justify-content-center align-items-center col-md-12" style="margin-top: 160px;">
+        <div class="row col-md-12">
+            <div class="row col-md-6">
+                <!-- Upload Section -->
+                <div class="row ">
+                    <div class="upload-section">
+                        <div class="upload-icon">
+                            <i class="bi bi-arrow-down"></i>    
+                        </div>
+                    </div>
+                </div>
+                        
+                <div class="row">
+                    <button class="btn btn-warning" style="border-radius: 0%;">
+                        <input type="file" id="file" class="upload" >
+                        <!-- accept=".stl" -->
+                    </button>
+                </div>
+            </div>
+            
+            <div class="row col-md-6">
+                <div class="row">
+                    <!-- Description Section -->
+                    <div class="description">
+                        <p>Send us your <strong>.stl</strong> or similar files accompanied by a <strong>.txt</strong> document specifying the dimensions of the requested print.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accessibility-buttons">
+        <!-- Botão para Aumentar Fonte -->
+        <button id="increase-font-btn" class="access-btn">A</button>
+
+        <!-- Botão para diminuir a Fonte -->
+        <button id="decrease-font-btn" class="access-btn">a</button>
+
+        <!-- Botão para Mudar Background -->
+        <button id="toggle-background-btn" class="access-btn"><img src="../public/imgs/modoEscuro.png" alt=""></button>
+    
+        <!-- Botões que não fazem nada -->
+        <button class="access-btn">👁‍🗨</button>
+        <button class="access-btn">⠿</button>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Botão para aumentar a fonte
+        document.getElementById('increase-font-btn').addEventListener('click', () => {
+            document.querySelectorAll('body, body *').forEach((element) => {
+                // Verificar se o elemento tem font-size e ajustar
+                let currentFontSize = window.getComputedStyle(element).fontSize;
+                let newSize = parseFloat(currentFontSize) * 1.1; // Aumenta 10%
+                element.style.fontSize = newSize + 'px';
+            });
+        });
+
+        // Botão para diminuir a fonte
+        document.getElementById('decrease-font-btn').addEventListener('click', () => {
+            document.querySelectorAll('body, body *').forEach((element) => {
+                let currentFontSize = window.getComputedStyle(element).fontSize;
+                let newSize = parseFloat(currentFontSize) * 0.9; // Diminui 10%
+                element.style.fontSize = newSize + 'px';
+            });
+        });
+
+        // Botão para mudar o background
+        document.getElementById('toggle-background-btn').addEventListener('click', () => {
+            let body = document.body;
+            if (body.style.backgroundColor === 'black') {
+                body.style.backgroundColor = '';
+                body.style.color = '';
+            } else {
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+   /* Custom CSS */
+   body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.register-section {
+    height: 100vh;
+    padding: 50px;
+}
+.login-section {
+    background-color: #3E6E8D;
+    color: #000;
+    height: 100vh;
+    padding: 50px;
+}
+.form-label {
+    font-style: italic;
+}
+.form-group {
+    padding: 10px;
+}
+.custom-button {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 30px;
+}
+.custom-button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.title {
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 180px;
+}
+.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.icon-button img {
+    width: 40px;
+    margin: 0 10px;
+}
+.botao {
+    display: inline-block; /* Permite ajustar padding e dimensões */
+    color: #000000; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #000000; /* Cor do texto */
+    background-color: #69b5be; /* Cor do fundo (azul) */
+    text-decoration: none; /* Remove o sublinhado do link */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 6px rgba(221, 162, 162, 0.1); /* Adiciona sombra */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transição suave */
+  }
+  
+  .botao:hover {
+    background-color: #dee4dd; /* Fundo mais escuro ao passar o mouse */
+    color: #000000; /* Cor do texto */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+    text-decoration: none; /* Remove sublinhado */
+  }
+  
+  .botao:active {
+    background-color: #f1f1f1; /* Fundo ainda mais escuro ao clicar */
+    color: #000000; /* Cor do texto */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra reduzida */
+    text-decoration: none; /* Remove sublinhado */
+  }
+  
+/* Container dos botões */
+.accessibility-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* Estilo dos botões */
+.access-btn {
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.access-btn:hover {
+    background-color: #ddd;
+}

@@ -1,0 +1,175 @@
+
+/* Custom CSS */
+body {
+    background-color: #f8f9fa;
+}
+
+/* .navbar {
+    background-color: #5a7ea0; 
+    color: white;
+}
+
+.navbar a {
+    color: black;
+    font-family: 'Georgia', serif;
+} */
+
+/* .navbar a.active {
+    font-weight: bold;
+    opacity: 0.6;
+} */
+
+.upload-section {
+    background-color: #f0ece6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.upload-icon {
+    font-size: 50px;
+    color: #333;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+}
+
+/* Navbar Superior */
+.bg-primary {
+    background-color: #4B77A7 !important; /* Cor azul semelhante */
+    width: 100%; /* Garante largura total no iframe */
+}
+
+.navbar-brand {
+    font-family: 'Times New Roman', serif;
+}
+
+
+/* Navbar Inferior */
+.bg-light {
+    background-color: #C8DAE3 !important; /* Cor cinza-azulada */
+    border-top: 1px solid #000; /* Borda superior */
+    width: 100%; /* Garante largura total no iframe */
+}
+
+.nav-link {
+    color: #000 !important;
+    font-family: 'Times New Roman', serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.nav-link.shop-active {
+    background-color: #D8E4EA; /* Cor do destaque no botão SHOP */
+    border-radius: 8px;
+    padding: 5px 15px;
+}
+
+.nav-link:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Order.css */
+
+/* Container principal */
+.container {
+    margin-top: 50px;
+}
+
+/* Upload Section */
+.upload-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f1eb; /* Cor semelhante à imagem */
+    height: 250px;
+    border: 1px solid #ccc;
+}
+
+.upload-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background-color: #fff;
+    border-radius: 10px;
+    height: 80px;
+    width: 80px;
+    margin: auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de Upload */
+.upload-section button {
+    margin-top: 20px;
+    display: block;
+    margin: auto;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+/* Descrição */
+.description {
+    background-color: #c9c2b9;
+    color: #444;
+    padding: 20px;
+    text-align: left;
+    font-family: "Georgia", serif;
+    font-size: 1.1rem;
+}
+
+.description p {
+    margin: 0;
+}
+
+.row{
+    padding-left: 0.2px;
+}
+
+/* Remove qualquer overflow horizontal */
+/* .iframe-navbar {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* Container dos botões */
+.accessibility-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* Estilo dos botões */
+.access-btn {
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.access-btn:hover {
+    background-color: #ddd;
+}
